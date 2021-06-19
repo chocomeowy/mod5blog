@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
+import SignUpScreen from "./SignUpScreen";
 
 const API = "https://chocomeowy.pythonanywhere.com";
 const API_LOGIN = "/auth";
@@ -75,6 +76,9 @@ export default function SignInScreen({ navigation }) {
             <ActivityIndicator style={{ marginLeft: 20, marginBottom: 20 }} /> // adjust
           ) : null}
         </View>
+        <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
+          <Text style={styles.errorText}>Sign up a new account here!</Text>
+        </TouchableOpacity>
         <Text style={styles.errorText}>{errorText}</Text>
       </View>
     </TouchableWithoutFeedback>

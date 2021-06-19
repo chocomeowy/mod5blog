@@ -8,11 +8,14 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { commonStyles } from "../styles/commonStyles";
+import ShowScreen from "./ShowScreen";
+
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 
 const API = "https://chocomeowy.pythonanywhere.com";
 const API_WHOAMI = "/whoami";
+const API_POSTS = "/posts";
 
 export default function AccountScreen({ navigation }) {
   const [username, setUsername] = useState("");
