@@ -24,7 +24,8 @@ export default function App() {
   useEffect(() => {
     loadToken();
   }, []);
-  loading ? (
+
+  return loading ? (
     <View style={styles.container}>
       <ActivityIndicator />
     </View>
